@@ -1,0 +1,9 @@
+streamlit
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.2
+matplotlib==3.9.2
+seaborn==0.13.2
+pyarrow==17.0.0
+plotly
+google-genai
