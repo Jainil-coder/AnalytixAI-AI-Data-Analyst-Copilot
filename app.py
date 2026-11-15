@@ -17,6 +17,7 @@ from utils.gemini_client import generate_response
 
 st.set_page_config(
     page_title="AnalytixAI: AI Data Analyst Copilot",
+    page_icon="📊",
     layout="wide"
 )
 
@@ -261,7 +262,7 @@ if uploaded:
 
                     st.divider()
 
-                    st.subheader("AI-Generated Insights")
+                    st.subheader("AnalytixAI Generated Insights")
 
                     analysis_results = json.dumps(
                         results,
