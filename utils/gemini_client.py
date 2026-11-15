@@ -1,6 +1,5 @@
 import json
 from pathlib import Path
-
 from google import genai
 from google.genai import types
 from google.genai import errors
@@ -48,13 +47,13 @@ def generate_response(prompt, system_instruction=None):
 
         if getattr(e, "code", None) == 503:
             raise RuntimeError(
-                "AnalytixAI is temporarily experiencing high demand. "
+                "InsightOS is temporarily experiencing high demand. "
                 "Please try again in a few moments."
             ) from e
 
         elif getattr(e, "code", None) == 429:
             raise RuntimeError(
-                "AnalytixAI request limit reached. Please wait before trying again."
+                "InsightOS request limit reached. Please wait before trying again."
             ) from e
 
         else:
