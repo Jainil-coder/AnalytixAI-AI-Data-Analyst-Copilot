@@ -3,6 +3,7 @@ from pathlib import Path
 
 from google import genai
 from google.genai import types
+from google.genai import errors
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,11 +20,11 @@ def get_gemini_client():
     with open(CONFIG_PATH, "r", encoding="utf-8") as file:
         config = json.load(file)
 
-    api_key = config.get("GEMINI_API_KEY")
+    api_key = config.get("API_KEY")
 
-    if not api_key or api_key == "YOUR_GEMINI_API_KEY_HERE":
+    if not api_key or api_key == "YOUR_API_KEY_HERE":
         raise ValueError(
-            "Please configure your Gemini API key in config.json."
+            "Please configure your API key in config.json."
         )
 
     return genai.Client(api_key=api_key)
@@ -35,17 +36,26 @@ MODEL = "gemini-3.8-flash"
 
 
 def generate_response(prompt, system_instruction=None):
-
-    response = client.models.generate_content(
-        model=MODEL,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            system_instruction=system_instruction,
-            temperature=0.2
+    try:
+        response = client.models.generate_content(
+            model=MODEL,
+            contents=prompt
         )
-    )
 
-    if not response.text:
-        raise ValueError("Gemini returned an empty response.")
+        return response.text
 
-    return response.text
+    except errors.APIError as e:
+
+        if getattr(e, "code", None) == 503:
+            raise RuntimeError(
+                "AnalytixAI is temporarily experiencing high demand. "
+                "Please try again in a few moments."
+            ) from e
+
+        elif getattr(e, "code", None) == 429:
+            raise RuntimeError(
+                "AnalytixAI request limit reached. Please wait before trying again."
+            ) from e
+
+        else:
+            raise
