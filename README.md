@@ -38,8 +38,7 @@ For example:
 
 AnalytixAI interprets the question and determines the appropriate analysis to perform.
 
-### 4. AI-Powered Analysis with Gemini
-- Uses Google's Gemini API to understand user questions.
+### 4. AI-Powered Analysis with AnalytixAI
 - Converts natural-language requests into structured analysis plans.
 - Uses Python-based data processing to calculate actual results.
 - Generates explanations based on computed results.
@@ -69,7 +68,7 @@ Perform common analytical operations, including:
 |---|---|
 | Programming Language | Python |
 | Frontend | Streamlit |
-| AI / LLM | Google Gemini |
+| AI / LLM |
 | Data Processing | Pandas, NumPy |
 | Data Visualization | Matplotlib, Seaborn, Plotly |
 | Data Format | CSV |
@@ -120,13 +119,13 @@ Make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/InsightOS.git
+git clone https://github.com/YOUR_USERNAME/AnalytixAI-AI-Data-Analyst-Copilot.git
 ```
 
 Navigate into the project directory:
 
 ```bash
-cd InsightOS
+cd AnalytixAI-AI-Data-Analyst-Copilot
 ```
 
 ### 2. Create a Virtual Environment
@@ -160,11 +159,11 @@ Create a `config.json` file in the project root:
 
 ```json
 {
-    "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY"
+    "GEMINI_API_KEY": "YOUR_API_KEY"
 }
 ```
 
-Replace `YOUR_GEMINI_API_KEY` with your actual API key.
+Replace `YOUR_API_KEY` with your actual API key.
 
 You can obtain a Gemini API key from [Google AI Studio](https://aistudio.google.com/).
 
@@ -192,7 +191,7 @@ A user can upload the dataset and ask:
 
 **"Which vehicle manufacturers have the highest average selling prices, and how does mileage affect their resale value?"**
 
-InsightOS can:
+AnalytixAI can:
 1. Understand the analytical question.
 2. Identify the relevant dataset columns.
 3. Create an analysis plan.
@@ -234,7 +233,7 @@ Potential improvements for future versions include:
 
 ## 🎯 Project Vision
 
-InsightOS aims to make data analysis accessible to everyone.
+AnalytixAI aims to make data analysis accessible to everyone.
 
 The long-term vision is to evolve from a CSV-based AI analytics assistant into an intelligent data analysis platform that can connect to multiple data sources, understand complex business questions, perform multi-step analysis, and deliver actionable insights.
 
@@ -249,5 +248,3 @@ The long-term vision is to evolve from a CSV-based AI analytics assistant into a
 GitHub: [Jainil-coder](https://github.com/Jainil-coder)
 
 ---
-
-*Built with Python, Streamlit, and Google Gemini.*
