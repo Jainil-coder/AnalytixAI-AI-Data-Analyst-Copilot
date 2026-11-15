@@ -1,10 +1,10 @@
-# AnalytixAI - AI Data Analyst Copilot
+# InsightOS - AI Data Analyst
 
 **Ask. Analyze. Discover.**
 
-AnalytixAI is an AI-powered data analysis application that helps users explore datasets, perform exploratory data analysis (EDA), and generate meaningful insights using natural-language questions.
+InsightOS is an AI-powered data analysis application that helps users explore datasets, perform exploratory data analysis (EDA), and generate meaningful insights using natural-language questions.
 
-Instead of manually writing Python queries or building charts, users can upload a CSV file, ask questions in plain English, and let InsightOS analyze the data, generate visualizations, and explain the findings.
+Instead of writing Python queries or building charts manually, users can upload a CSV file, ask questions in plain English, and let InsightOS analyze the data, generate visualizations, and explain the findings.
 
 ---
 
@@ -36,9 +36,9 @@ For example:
 - Which categories have the highest average values?
 - How has performance changed over time?
 
-AnalytixAI interprets the question and determines the appropriate analysis to perform.
+InsightOS interprets the question and determines the appropriate analysis to perform.
 
-### 4. AI-Powered Analysis with AnalytixAI
+### 4. AI-Powered Analysis with InsightOS
 - Converts natural-language requests into structured analysis plans.
 - Uses Python-based data processing to calculate actual results.
 - Generates explanations based on computed results.
@@ -79,7 +79,7 @@ Perform common analytical operations, including:
 ## 🏗️ Project Structure
 
 ```text
-AnalytixAI/
+InsightOS/
 │
 ├── app.py
 ├── config.json
@@ -119,13 +119,13 @@ Make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AnalytixAI-AI-Data-Analyst-Copilot.git
+git clone https://github.com/YOUR_USERNAME/InsightOS-AI-Data-Analyst-Copilot.git
 ```
 
 Navigate into the project directory:
 
 ```bash
-cd AnalytixAI-AI-Data-Analyst-Copilot
+cd InsightOS-AI-Data-Analyst-Copilot
 ```
 
 ### 2. Create a Virtual Environment
@@ -191,7 +191,7 @@ A user can upload the dataset and ask:
 
 **"Which vehicle manufacturers have the highest average selling prices, and how does mileage affect their resale value?"**
 
-AnalytixAI can:
+InsightOS can:
 1. Understand the analytical question.
 2. Identify the relevant dataset columns.
 3. Create an analysis plan.
@@ -233,7 +233,7 @@ Potential improvements for future versions include:
 
 ## 🎯 Project Vision
 
-AnalytixAI aims to make data analysis accessible to everyone.
+InsightOS aims to make data analysis accessible to everyone.
 
 The long-term vision is to evolve from a CSV-based AI analytics assistant into an intelligent data analysis platform that can connect to multiple data sources, understand complex business questions, perform multi-step analysis, and deliver actionable insights.
 
