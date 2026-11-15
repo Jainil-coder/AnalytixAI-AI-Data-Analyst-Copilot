@@ -16,13 +16,13 @@ from utils.gemini_client import generate_response
 
 
 st.set_page_config(
-    page_title="AnalytixAI: AI Data Analyst Copilot",
+    page_title="InsightOS: AI Data Analyst",
     page_icon="📊",
     layout="wide"
 )
 
 
-st.title("AnalytixAI")
+st.title("InsightOS")
 
 st.write(
     "Upload your dataset and interact with it. "
@@ -193,7 +193,7 @@ if uploaded:
                     # STEP 1: GEMINI PLANNING
 
                     with st.spinner(
-                        "AnalytixAI thinking..."
+                        "InsightOS thinking..."
                     ):
 
                         plan = create_plan(question, df)
@@ -262,7 +262,7 @@ if uploaded:
 
                     st.divider()
 
-                    st.subheader("AnalytixAI Generated Insights")
+                    st.subheader("InsightOS Generated Insights")
 
                     analysis_results = json.dumps(
                         results,
@@ -324,7 +324,7 @@ FORMAT:
 """
 
                     with st.spinner(
-                        "AnalytixAI is preparing your analytical report..."
+                        "InsightOS is preparing your analytical report..."
                     ):
 
                         insights = generate_response(
