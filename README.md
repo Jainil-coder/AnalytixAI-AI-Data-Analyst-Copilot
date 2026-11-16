@@ -98,9 +98,9 @@ InsightOS/
 | File | Responsibility |
 |---|---|
 | `app.py` | Streamlit application and user interface |
-| `config.json` | Local Gemini API configuration |
+| `config.json` | Local API configuration |
 | `requirements.txt` | Python dependencies |
-| `gemini_client.py` | Gemini API integration |
+| `gemini_client.py` | API integration |
 | `analysis_engine.py` | Data processing, statistical analysis, and chart generation |
 | `prompts.py` | AI system instructions and analysis prompts |
 
@@ -119,7 +119,7 @@ Make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/InsightOS-AI-Data-Analyst-Copilot.git
+git clone https://github.com/Jainil-coder/InsightOS-AI-Data-Analyst.git
 ```
 
 Navigate into the project directory:
@@ -134,7 +134,7 @@ cd InsightOS-AI-Data-Analyst-Copilot
 python -m venv venv
 ```
 
-Activate it on Windows PowerShell:
+Activate it in Windows PowerShell:
 
 ```powershell
 .\venv\Scripts\Activate.ps1
@@ -159,7 +159,7 @@ Create a `config.json` file in the project root:
 
 ```json
 {
-    "GEMINI_API_KEY": "YOUR_API_KEY"
+    "API_KEY": "YOUR_API_KEY"
 }
 ```
 
